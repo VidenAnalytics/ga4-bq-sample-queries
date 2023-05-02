@@ -2,8 +2,8 @@
 
 -- Initialisation script
 
-declare end_date string default (select format_date('%y%m%d',date_sub(current_date(), interval 33 day)));
-declare end_date string default (select format_date('%y%m%d',date_sub(current_date(), interval 3 day)));
+declare end_date string default (select format_date('%Y%m%d',date_sub(current_date(), interval 33 day)));
+declare end_date string default (select format_date('%Y%m%d',date_sub(current_date(), interval 3 day)));
 
 
 -- 1. Create session_traffic_prep table
@@ -11,7 +11,7 @@ declare end_date string default (select format_date('%y%m%d',date_sub(current_da
 create or replace table `your_project.reporting.src_event_traffic` partition by date as (
 
 select
-  cast(event_date as date format 'yyyymmdd') as date,
+  cast(event_date as date format 'YYYYMMDD') as date,
   -- Unique session id. user_pseudo_id or ga_session_id fields could missing
   concat(coalesce(user_pseudo_id, ""), coalesce(cast((select value.int_value from unnest(event_params) where key = "ga_session_id") as string), "")) as session_id,
   user_pseudo_id,
@@ -200,7 +200,7 @@ left join
 create or replace table `your_project.reporting.items` partition by date as (
 
 select
-  cast(event_date as date format 'yyyymmdd') as date,
+  cast(event_date as date format 'YYYYMMDD') as date,
   items.item_name as item_name,
   items.item_variant as item_variant,
   items.quantity as item_quantity,
