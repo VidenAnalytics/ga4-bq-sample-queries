@@ -154,7 +154,7 @@ select
           coalesce(
               cast((select value.int_value from unnest(event_params) where key = "ga_session_id") as string), "")
               ) as session_id,
-  parse_date("%y%m%d",event_date) as event_date,
+  parse_date("%Y%m%d",event_date) as event_date,
   timestamp_micros(event_timestamp) as event_timestamp,
   event_name,
   (select value.int_value from unnest(event_params) where key = "ga_session_number") as ga_session_number,
