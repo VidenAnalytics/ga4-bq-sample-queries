@@ -2,7 +2,7 @@
 
 -- Initialisation script
 
-declare end_date string default (select format_date('%Y%m%d',date_sub(current_date(), interval 33 day)));
+declare start_date string default (select format_date('%Y%m%d',date_sub(current_date(), interval 33 day)));
 declare end_date string default (select format_date('%Y%m%d',date_sub(current_date(), interval 3 day)));
 
 
