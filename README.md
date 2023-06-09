@@ -1,8 +1,8 @@
 # Sample Queries for stored in BigQuery GA4 data
 
 ## Folders: 
-1. reporting - queries for reporting in Looker Studio
-2. helpers - other useful scripts
+1. reporting - BigQuery scripts for reporting in Looker Studio
+2. helpers - other useful BigQuery scripts
 3. looker-studio-calculated-fields - useful Looker Studio calculated fields
 
 ## Future folders:
