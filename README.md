@@ -3,7 +3,7 @@
 ## Folders: 
 1. reporting - queries for reporting in Looker Studio
 2. helpers - other useful scripts
-3. ls-calc-fields - useful Looker Studio calculated fields
+3. looker-studio-calculated-fields - useful Looker Studio calculated fields
 
 ## Future folders:
 
