@@ -17,5 +17,5 @@
 - https://www.ga4bigquery.com/how-to-build-your-own-ga4-marketing-attribution-model-comparison-tool-in-bigquery-and-looker-studio/
 - https://gtm-gear.com/
 - https://tanelytics.com/ga4-bigquery-session-traffic_source/
-- https://www.teamsimmer.com/2022/12/07/how-do-i-trigger-a-scheduled-query-when-the-ga4-daily-export-happens/?utm_source=convertkit&utm_medium=email&utm_campaign=What%27s+going+on+in+the+world+of+technical+marketing...+%E2%80%93+Simmer+Newsletter+%2347%20-%209615367
+- https://www.teamsimmer.com/2022/12/07/how-do-i-trigger-a-scheduled-query-when-the-ga4-daily-export-happens
 - https://github.com/Velir/dbt-ga4
