@@ -175,9 +175,10 @@ select
   ecommerce.tax_value as ecommerce_tax_value,
   ecommerce.unique_items as ecommerce_unique_items,
   ecommerce.transaction_id as ecommerce_transaction_id,
-  (select value.string_value from unnest(event_params) where key = "event_category") as event_category,
-  (select value.string_value from unnest(event_params) where key = "event_action") as event_action,
-  (select value.string_value from unnest(event_params) where key = "event_label") as event_label
+  -- Example how custom event dimensions could be pulled
+  -- (select value.string_value from unnest(event_params) where key = "event_category") as event_category,
+  -- (select value.string_value from unnest(event_params) where key = "event_action") as event_action,
+  -- (select value.string_value from unnest(event_params) where key = "event_label") as event_label
 from
   `your_project.your_dataset.events_*`
 where
