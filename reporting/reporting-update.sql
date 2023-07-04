@@ -33,9 +33,9 @@ where
   event_name not in ('session_start', 'first_visit'));
 
 
--- 2. Update session_traffic table
+-- 2. Recreate session_traffic table
 
-insert into `your_project.reporting.stg_session_traffic` (
+create or replace table `your_project.reporting.stg_session_traffic` partition by date as (
 
 with attribution_prep as (
 select
