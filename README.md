@@ -19,3 +19,4 @@
 - https://tanelytics.com/ga4-bigquery-session-traffic_source/
 - https://www.teamsimmer.com/2022/12/07/how-do-i-trigger-a-scheduled-query-when-the-ga4-daily-export-happens
 - https://github.com/Velir/dbt-ga4
+- https://adswerve.com/blog/ga4-bigquery-tips-guide-to-attribution/
