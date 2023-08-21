@@ -1,5 +1,3 @@
--- Initial code: Taneli Salonen, https://tanelytics.com/ga4-bigquery-session-traffic_source/
-
 -- Update script
 
 declare start_date string default (select format_date('%Y%m%d',date_sub(current_date(), interval 32 day)));
