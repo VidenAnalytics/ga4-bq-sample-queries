@@ -55,8 +55,8 @@ select
             else traffic_source.source end  as source,
 
             case when traffic_source.gclid is not null or page_location like "http%gclid=%" then "cpc"
-            when page_location like "http%fbclid=%" then "paidsocial"
-            when page_location like "http%ttclid=%" then "paidsocial"
+            when page_location like "http%fbclid=%" then "paid social"
+            when page_location like "http%ttclid=%" then "paid social"
             when page_location like "http%msclkid=%" then "cpc"
             else traffic_source.medium end  as medium,
 
@@ -84,8 +84,8 @@ select
             else traffic_source.source end  as source,
 
             case when traffic_source.gclid is not null or page_location like "http%gclid=%" then "cpc"
-            when page_location like "http%fbclid=%" then "paidsocial"
-            when page_location like "http%ttclid=%" then "paidsocial"
+            when page_location like "http%fbclid=%" then "paid social"
+            when page_location like "http%ttclid=%" then "paid social"
             when page_location like "http%msclkid=%" then "cpc"
             else traffic_source.medium end  as medium,
 
