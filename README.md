@@ -20,3 +20,5 @@
 - https://www.teamsimmer.com/2022/12/07/how-do-i-trigger-a-scheduled-query-when-the-ga4-daily-export-happens
 - https://github.com/Velir/dbt-ga4
 - https://adswerve.com/blog/ga4-bigquery-tips-guide-to-attribution/
+- https://gist.github.com/markrittman/b64c6dc04e39886c8b7870f357e7300f
+- https://github.com/rittmananalytics/ra_attribution_for_ga4
