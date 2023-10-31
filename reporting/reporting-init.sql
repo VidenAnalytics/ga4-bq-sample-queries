@@ -49,12 +49,14 @@ select
       (
         select
           as struct
+            -- Please update values according to your utm-s
             case when traffic_source.gclid is not null or page_location like "http%gclid=%" then "google"
             when page_location like "http%fbclid=%" then "facebook"
             when page_location like "http%ttclid=%" then "tiktok"
             when page_location like "http%msclkid=%" then "bing"
             else traffic_source.source end  as source,
 
+            -- Please update values according to your utm-s
             case when traffic_source.gclid is not null or page_location like "http%gclid=%" then "cpc"
             when page_location like "http%fbclid=%" then "paid social"
             when page_location like "http%ttclid=%" then "paid social"
@@ -78,12 +80,14 @@ select
       (
         select
           as struct
+            -- Please update values according to your utm-s
             case when traffic_source.gclid is not null or page_location like "http%gclid=%" then "google"
             when page_location like "http%fbclid=%" then "facebook"
             when page_location like "http%ttclid=%" then "tiktok"
             when page_location like "http%msclkid=%" then "bing"
             else traffic_source.source end  as source,
 
+            -- Please update values according to your utm-s
             case when traffic_source.gclid is not null or page_location like "http%gclid=%" then "cpc"
             when page_location like "http%fbclid=%" then "paid social"
             when page_location like "http%ttclid=%" then "paid social"
