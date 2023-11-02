@@ -166,7 +166,15 @@ select
   user_pseudo_id,
   device.category as device_category,
   device.language as device_language,
+  device.web_info.browser as device_browser,
+  device.web_info.browser_version as device_browser_version,
+  device.operating_system as device_operating_system,
+  device.operating_system_version as device_operating_system_version,
+  device.mobile_brand_name as device_brand_name,
+  device.mobile_model_name as device_mobile_model_name,
   geo.country as geo_country,
+  geo.city as geo_city,
+  geo.region as geo_region,
   traffic_source.source as user_source,
   traffic_source.medium as user_medium,
   traffic_source.name as user_campaign,
@@ -177,6 +185,10 @@ select
   ecommerce.tax_value as ecommerce_tax_value,
   ecommerce.unique_items as ecommerce_unique_items,
   ecommerce.transaction_id as ecommerce_transaction_id,
+  ifnull(event_timestamp -lag(event_timestamp, 1) over (partition by user_pseudo_id, (SELECT value.int_value FROM UNNEST(event_params) WHERE key = "ga_session_id") order by event_timestamp asc), 0)
+   / 1000000 as previous_timestamp,
+  if(event_timestamp = max(event_timestamp) over (partition by user_pseudo_id,(SELECT value.int_value FROM UNNEST(event_params) WHERE key = "ga_session_number")), 1, null) as exit_page,
+  (select value.int_value from unnest(event_params) where key = "engagement_time_msec") as engagement_time_msec
   -- Example how custom event dimensions could be pulled
   -- (select value.string_value from unnest(event_params) where key = "event_category") as event_category,
   -- (select value.string_value from unnest(event_params) where key = "event_action") as event_action,
