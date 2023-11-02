@@ -162,6 +162,7 @@ select
   (select value.int_value from unnest(event_params) where key = "ga_session_number") as ga_session_number,
   (select value.int_value from unnest(event_params) where key = "ga_session_id") as ga_session_id,
   (select value.string_value from unnest(event_params) where key = "page_location") as page_location,
+  (select value.string_value from unnest(event_params) where key = "page_title") as page_title,
   (select value.int_value from unnest(event_params) where key = "entrances") as entrances,
   coalesce((select value.string_value from unnest(event_params) where key = "session_engaged"),
     cast((select value.int_value from unnest(event_params) where key = "session_engaged") as string)) as session_engaged,
