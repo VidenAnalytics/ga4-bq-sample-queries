@@ -23,3 +23,4 @@
 - https://gist.github.com/markrittman/b64c6dc04e39886c8b7870f357e7300f
 - https://github.com/rittmananalytics/ra_attribution_for_ga4
 - https://github.com/ArtemKorneevGA/dataform-lp-report
+- https://github.com/adswerve/GA4-bigquery-tips
