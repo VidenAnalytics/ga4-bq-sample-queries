@@ -24,3 +24,4 @@
 - https://github.com/rittmananalytics/ra_attribution_for_ga4
 - https://github.com/ArtemKorneevGA/dataform-lp-report
 - https://github.com/adswerve/GA4-bigquery-tips
+- https://github.com/adswerve/GA4-bigquery-tips/blob/main/channelGrouping.sql
