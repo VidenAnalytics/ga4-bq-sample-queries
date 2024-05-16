@@ -26,3 +26,4 @@
 - https://github.com/adswerve/GA4-bigquery-tips
 - https://github.com/adswerve/GA4-bigquery-tips/blob/main/channelGrouping.sql
 - https://github.com/google-marketing-solutions/ga4_dataform/tree/main
+- https://github.com/alexignatenko/bigquery_public
